@@ -5,7 +5,7 @@ WRJ.data.credits = {
   title: 'Made by people who run with you',
   text: 'Thank you to everyone who built, designed, photographed and tested this site.',
   people: WRJ.data.developers.concat([
-    { id: 'Mayanja-Joel-tephen', name: 'Mayanja Joel Stephen', role: 'UI UX and Front-end Designer', hue: 290, links: [{ icon: 'instagram', label: 'Instagram', href: '#' }] },
-    { id: 'Sempala-Harison-Solomon', name: 'Sempala Harison .S', role: 'SEO analyst, Backend ENgineer, Help and support', hue: 22, links: [{ icon: 'globe', label: '', href: '' }] }
+    { id: 'Mayanja-Joel-tephen', name: 'Mayanja Joel Stephen', role: 'UI UX and Front-end Designer', hue: 290, links: [{ icon: 'instagram', label: 'Instagram', href: '#' }, { icon: 'linkedin', label: 'LinkedIn', href: '#' }, { icon: 'globe', label: 'Portfolio', href: '#' }] },
+    { id: 'Sempala-Harison-Solomon', name: 'Sempala Harison .S', role: 'SEO analyst, Backend ENgineer, Help and support', hue: 22, links: [{ icon: 'instagram', label: 'Instagram', href: '#' }, { icon: 'linkedin', label: 'LinkedIn', href: '#' }, { icon: 'globe', label: 'Portfolio', href: '#' }] }
   ])
 };

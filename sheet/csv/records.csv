@@ -1,0 +1,9 @@
+id,type,category,km,duration,athleteId,date,location,show
+rec-2610-a,Marathon,race,42.2,3:21:05,lena-hoffmann,2026-10-11,"Away marathon, Kampala",TRUE
+rec-2610-b,Social jog,jog,8.4,0:58:40,alex-namusoke,2026-10-17,Jinja Bridge to Bujagali,TRUE
+rec-2610-c,Half marathon,race,21.1,1:15:30,samuel-kiprono,2026-10-04,Entebbe road race,TRUE
+rec-2609-a,Charity run,charity,10,0:44:12,sarah-nakato,2026-09-27,Jinja school fundraiser,TRUE
+rec-2609-b,Long jog,jog,15.3,1:32:10,tom-whitaker,2026-09-19,Source of the Nile loop,TRUE
+rec-2609-c,Trail run,jog,12.6,1:24:50,brian-okello,2026-09-12,Bujagali Falls trail,TRUE
+rec-2608-a,10K race,race,10,0:40:10,ayumi-tanaka,2026-08-29,Kakira 10K,TRUE
+rec-2608-b,Charity run,charity,5,0:27:45,ruth-achieng,2026-08-15,Walukuba community run,TRUE

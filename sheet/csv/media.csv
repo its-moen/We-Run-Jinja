@@ -1,0 +1,5 @@
+id,type,title,caption,youtubeId,src,poster,duration,show
+saturday-run,youtube,A Saturday on the bridge,"Sunrise, warm up and the first loop.",,,assets/gallery/g1.jpg,2:10,TRUE
+charity-run,youtube,Charity fun run highlights,"Raising school fees, one kilometre at a time.",,,assets/gallery/g4.jpg,1:30,TRUE
+new-runner,file,Your first run with us,What to expect on day one.,,,assets/gallery/g3.jpg,0:55,TRUE
+photo-clouds,image,Cables and clouds,Photo from a recent Saturday.,,assets/gallery/g2.jpg,,,TRUE

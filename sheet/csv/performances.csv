@@ -1,0 +1,13 @@
+distance,label,rank,athleteId,time,date,event,show
+5K,5K,1,samuel-kiprono,16:52,2025-03-08,Club time trial,TRUE
+5K,5K,2,brian-okello,17:40,2025-06-14,Saturday 5K,TRUE
+5K,5K,3,sarah-nakato,18:55,2026-02-21,Club time trial,TRUE
+10K,10K,1,samuel-kiprono,34:40,2025-08-30,Kakira 10K,TRUE
+10K,10K,2,brian-okello,37:05,2025-08-30,Kakira 10K,TRUE
+10K,10K,3,sarah-nakato,39:30,2026-05-16,Charity 10K,TRUE
+21K,Half marathon,1,samuel-kiprono,1:15:30,2026-10-04,Entebbe road race,TRUE
+21K,Half marathon,2,brian-okello,1:22:15,2026-03-01,Kampala half,TRUE
+21K,Half marathon,3,sarah-nakato,1:29:10,2025-11-09,Jinja half,TRUE
+42K,Marathon,1,samuel-kiprono,2:38:05,2025-10-19,Away marathon,TRUE
+42K,Marathon,2,brian-okello,3:01:50,2026-06-07,Away marathon,TRUE
+42K,Marathon,3,sarah-nakato,3:12:44,2026-06-07,Away marathon,TRUE

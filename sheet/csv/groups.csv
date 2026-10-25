@@ -1,0 +1,5 @@
+id,icon,title,range,tag,text,show
+seed-walkers,users,Seed walkers,1 to 4 km,Walk or easy jog,"A gentle walk or slow jog with no pressure. For beginners, families, recovery and anyone not ready to run fast.",TRUE
+aerobics,heart,Aerobics,Music and movement,Fitness,"Led aerobics to warm up or wind down. No distance, just good energy.",TRUE
+steady,run,Steady runners,3 to 10 km,Social pace,"Relaxed running and conversation. Some Saturdays we keep it to 3 km, other days we stretch to 10 km.",TRUE
+long,medal,Long runners,10 to 21 km,Race training,Longer loops for marathon and half marathon goals.,TRUE

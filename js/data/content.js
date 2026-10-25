@@ -24,6 +24,25 @@ WRJ.data.content = {
       { year: '2026', text: 'We Run Jinja goes online.' }
     ]
   },
+  oneRoad: {
+    label: 'One crew',
+    title: 'Locals and foreigners.<br>One road.',
+    text: 'They arrive from both sides of the bridge, with different accents and the same Saturday alarm. By the finish there is just one crew.',
+    homeCode: 'UG',
+    localsLabel: 'Locals', foreignersLabel: 'Visitors and expats', mergedLabel: 'One crew',
+    stats: { locals: 52, foreigners: 34, countries: 14 }   /* shown as numbers. Update when your membership changes */
+  },
+  facts: [
+    { icon: 'calendar', label: 'When',  value: 'Saturdays, 06:30' },
+    { icon: 'pin',      label: 'Where', value: 'Jinja Bridge viewpoint' },
+    { icon: 'users',    label: 'Who',   value: 'Locals, visitors, every pace' },
+    { icon: 'heart',    label: 'Cost',  value: 'Free to join a run' }
+  ],
+  steps: [
+    { n: 1, icon: 'whatsapp', title: 'Say hello',        text: 'Message us on WhatsApp or fill in the form. Tell us how you like to move.' },
+    { n: 2, icon: 'users',    title: 'Pick your group',  text: 'Seed walkers 1 to 4 km, aerobics, steady runners or long runners.' },
+    { n: 3, icon: 'run',      title: 'Show up Saturday', text: 'Meet at the bridge, move together and stay for coffee. Nobody is left behind.' }
+  ],
   faq: [
     { q: 'Do I need to be fast?', a: 'No. We run in pace groups and nobody is left behind. Walkers are welcome too.' },
     { q: 'When and where do you meet?', a: 'Mostly Saturdays at the Jinja Bridge viewpoint. Some weeks we also run on Monday, Wednesday or Thursday. See the Events page for dates.' },

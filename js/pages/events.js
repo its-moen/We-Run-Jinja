@@ -8,23 +8,23 @@ WRJ.pages.events = {
     var strip = '<ul class="week-strip" data-stagger>' + days.map(function (d, i) {
       var s = D.site.schedule.find(function (x) { return x.dow === i; });
       return '<li class="' + (s ? 'on' : '') + (s && s.main ? ' main' : '') + '" id="week-' + d.toLowerCase() + '"><b class="display">' + d + '</b><small>' + (s ? s.time : 'Rest') + '</small></li>'; }).join('') + '</ul>';
-    var hero = W.c.PageHero({ chip: 'Mainly Saturdays, sometimes midweek', title: 'Events', text: 'Weekly runs, away marathons, charity miles and a birthday celebration every third Saturday.', extra: strip });
+    var hero = W.c.PageHero({ chip: 'Mainly Saturdays, sometimes midweek', title: 'Events', text: 'Weekly runs, away marathons, charity miles and one birthday celebration every third Saturday.', extra: strip });
 
     var rhythm = '<section class="section" id="rhythm"><div class="container">' + W.c.SectionHead({ label: 'When we run', title: 'The weekly rhythm', text: 'Saturday is our main run. Monday, Wednesday and Thursday sessions pop up through the month.' }) +
-      '<div class="sched-grid" data-float-children="5">' + U.list(D.site.schedule, function (s) { return W.c.ScheduleCard({ slot: s, ctx: 'events' }); }) + '</div></div></section>';
+      '<div class="sched-grid">' + U.list(D.site.schedule, function (s) { return W.c.ScheduleCard({ slot: s, ctx: 'events' }); }) + '</div></div></section>';
 
     var groups = '<section class="section" id="groups"><div class="container">' + W.c.SectionHead({ label: 'Every pace has a place', title: 'Pick your group', text: 'Seed walkers cover 1 to 4 km. Aerobics, steady and long runners fill the rest of the morning.' }) +
       '<div class="grid cols-4" data-stagger>' + U.list(D.groups, function (g) { return W.c.GroupCard({ group: g, ctx: 'events' }); }) + '</div></div></section>';
 
     var acts = '<section class="section" id="activities"><div class="container">' + W.c.SectionHead({ label: 'What we do', title: 'Key activities' }) +
-      '<div class="grid cols-3" data-stagger data-float-children="5">' + U.list(D.activities, function (a) { return W.c.ActivityCard({ activity: a, ctx: 'events' }); }) + '</div></div></section>';
+      '<div class="grid cols-3" data-stagger>' + U.list(D.activities, function (a) { return W.c.ActivityCard({ activity: a, ctx: 'events' }); }) + '</div></div></section>';
 
     var b = D.birthdayRun, nexts = U.thirdSaturdays(3);
     var birthday = '<section class="section" id="birthday-celebration"><div class="container"><div class="bday-feature">' +
       '<div class="bday-feature-main"><span class="chip">' + W.icon('cake') + b.rule + '</span><h2 class="display h-lg" data-split="chars">Monthly birthday celebration</h2><p class="lead" data-split="words">' + U.esc(b.text) + '</p>' +
       '<ul class="event-meta"><li>' + W.icon('clock') + b.time + '</li><li>' + W.icon('pin') + U.esc(b.place) + '</li></ul>' +
       '<ol class="next-dates" data-stagger>' + nexts.map(function (d, i) { return '<li id="birthday-date-' + (i + 1) + '"><b class="display">' + d.getDate() + '</b><span>' + U.fmt(d, { weekday: 'long', month: 'long', year: 'numeric' }) + '</span></li>'; }).join('') + '</ol></div>' +
-      '<div class="bday-feature-side glass" data-reveal="right"><h3 class="display h-sm">Who we celebrate</h3>' + W.c.BirthdayPanel({ ctx: 'events' }) + '</div></div></div></section>';
+      '<div class="bday-feature-side glass" data-reveal><h3 class="display h-sm">One party, whole month</h3>' + W.c.BirthdayPanel({ ctx: 'events' }) + '</div></div></div></section>';
 
     /* upcoming: one-off events + generated birthday runs + next two regular Saturdays */
     var list = D.events.filter(function (e) { return U.date(e.date) >= today; });
@@ -39,15 +39,18 @@ WRJ.pages.events = {
         return shown.length ? '<div class="event-list">' + U.list(shown, function (e) { return W.c.EventCard({ event: e, ctx: 'upcoming-' + k }); }) + '</div>' : '<p class="empty glass">Nothing in this group just yet. Check back soon.</p>';
       } }) + '</div></section>';
 
-    var gallery = '<section class="section" id="gallery"><div class="container">' + W.c.SectionHead({ label: 'Moments', title: 'Gallery', text: 'Scroll and the columns glide in opposite directions. Tap any photo to enlarge it.' }) + W.c.Gallery({ items: D.gallery, ctx: 'events-gallery', cols: 3 }) + '</div></section>';
-
     var group = [{ key: 'all', label: 'Everyone' }, { key: 'ug', label: 'Uganda' }, { key: 'intl', label: 'International' }];
-    var athletes = '<section class="section" id="athletes"><div class="container">' + W.c.SectionHead({ label: 'The runners', title: 'Athletes', text: 'Tap a runner for a simple profile. Locals and visitors, side by side.' }) +
-      W.c.Tabs({ id: 'athletes-tabs', label: 'Country filter', tabs: group, render: function (k) {
-        var shown = D.athletes.filter(function (a) { return k === 'all' || (k === 'ug' ? a.country.code === 'UG' : a.country.code !== 'UG'); });
-        return '<div class="grid cols-4 athlete-grid" data-float-children="4">' + U.list(shown, function (a) { return W.c.AthleteCard({ athlete: a, ctx: 'athletes-' + k }); }) + '</div>';
-      } }) + '</div></section>';
+    var athletesBody = W.c.Tabs({ id: 'athletes-tabs', label: 'Country filter', tabs: group, render: function (k) {
+      var shown = D.athletes.filter(function (a) { return k === 'all' || (k === 'ug' ? a.country.code === 'UG' : a.country.code !== 'UG'); });
+      return '<div class="grid cols-4 athlete-grid">' + U.list(shown, function (a) { return W.c.AthleteCard({ athlete: a, ctx: 'athletes-' + k }); }) + '</div>';
+    } });
+    var more = '<section class="section" id="more"><div class="container">' + W.c.SectionHead({ label: 'More to explore', title: 'Photos, films and runners', text: 'Open a block to browse.' }) +
+      '<div class="dd-stack">' +
+        W.c.Dropdown({ id: 'gallery', icon: 'star', title: 'Gallery', summary: 'Tap any photo to enlarge', body: W.c.Gallery({ items: D.gallery, ctx: 'events-gallery' }) }) +
+        W.c.Dropdown({ id: 'media', icon: 'arrowRight', title: 'Films and photos', summary: 'Short films and photo stories from our runs', body: W.c.MediaSection({ ctx: 'events-media' }) }) +
+        W.c.Dropdown({ id: 'athletes', icon: 'users', title: 'Athletes', summary: 'Tap a runner for a simple profile', body: athletesBody }) +
+      '</div></div></section>';
 
-    return hero + rhythm + groups + acts + birthday + upcoming + gallery + athletes;
+    return hero + rhythm + groups + acts + birthday + upcoming + more;
   }
 };

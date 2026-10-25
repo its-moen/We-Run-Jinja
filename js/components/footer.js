@@ -28,7 +28,7 @@
     var promos = '<div class="promos" id="promotions">' + U.list(C.promos, function (x) { return '<div class="promo" id="footer-' + x.id + '"><b>' + W.icon('tag') + U.esc(x.title) + '</b><p>' + U.esc(x.text) + '</p><button class="chip" data-copy="' + U.esc(x.code) + '">Code ' + U.esc(x.code) + '</button></div>'; }) + '</div>';
     return W.c.Credits() + '<footer class="site-footer"><div class="container">' +
       '<div class="footer-cta glass" data-reveal><h2 class="display h-lg" data-split="chars">Run with us</h2><div class="row">' + W.c.Button({ label: 'Join a run', href: 'index.html#join' }) + W.c.Button({ label: 'See events', href: 'events.html', variant: 'ghost' }) + '</div></div>' +
-      '<div class="footer-panels" data-float-children="4">' +
+      '<div class="footer-panels">' +
         panel('chain', 'users', 'Chain of command', chain) +
         panel('birthdays', 'cake', 'Birthdays', W.c.BirthdayPanel({ ctx: 'footer', compact: true })) +
         panel('news', 'news', 'News and promotions', news + '<h4 class="bday-head">Promotions and discounts</h4>' + promos) +
@@ -39,7 +39,7 @@
         '<nav aria-label="Resources"><h4>Resources</h4>' + links(C.footer.resources) + '</nav>' +
         '<nav aria-label="Club"><h4>Club</h4>' + links(C.footer.club) + '</nav>' +
         '<nav aria-label="Support"><h4>Support</h4>' + links(C.footer.support) + '</nav>' +
-        '<div><h4>Social handles</h4><ul class="social-row">' + U.list(S.socials, function (s) { return '<li><a class="icon-btn" id="footer-social-' + s.id + '" href="' + s.href + '" aria-label="' + s.label + '">' + W.icon(s.icon) + '</a></li>'; }) + '</ul></div></div>' +
+        '<div><h4>Social handles</h4>' + W.c.SocialRow({ links: S.socials, ctx: 'footer' }) + '</div></div>' +
       '<div class="footer-bottom"><p>&copy; ' + new Date().getFullYear() + ' ' + U.esc(S.name) + '. Made in ' + U.esc(S.city) + '.</p><a href="#main" class="chip">Back to top ' + W.icon('arrowUp') + '</a></div></div></footer>';
   };
   W.ui.inits.push(function (scope) {

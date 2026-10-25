@@ -22,14 +22,17 @@
     a.contrast ? root.dataset.contrast = 'high' : delete root.dataset.contrast;
     a.motion ? root.dataset.motion = 'reduce' : delete root.dataset.motion;
     if (W.scroll && W.scroll.refresh) W.scroll.refresh();
+    if (W.ui.bg) W.ui.bg.sync();
   };
   /* push data/settings.js into CSS variables for the current screen size */
+  T.sizeIndex = function () { var bp = W.data.settings.breakpoints, w = innerWidth; return w >= bp.wide ? 0 : w >= bp.desktop ? 1 : w >= bp.tablet ? 2 : 3; };
   T.applySettings = function () {
-    var S = W.data.settings, bp = S.breakpoints, i = innerWidth <= bp.phone ? 2 : innerWidth <= bp.tablet ? 1 : 0, st = root.style;
-    ['xl', 'lg', 'md', 'sm', 'body', 'small'].forEach(function (k) { st.setProperty('--fs-' + k, S.type[k][i] + 'px'); });
-    st.setProperty('--section-y', S.space.section[i] + 'px'); st.setProperty('--gap', S.space.gap[i] + 'px');
-    st.setProperty('--pad', S.space.pad[i] + 'px'); st.setProperty('--card-pad', S.space.card[i] + 'px'); st.setProperty('--s', S.space.scale[i]);
-    ['sm', 'md', 'lg'].forEach(function (k) { st.setProperty('--r-' + k, S.radius[k][i] + 'px'); });
+    var S = W.data.settings, i = T.sizeIndex(), st = root.style, t = S.type, px = function (k, o) { st.setProperty(k, o[i] + 'px'); };
+    ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body'].forEach(function (k) { px('--fs-' + k, t[k]); });
+    px('--fs-text-sm', t.small); px('--fs-small', t.caption); px('--fs-btn', t.button);
+    st.setProperty('--lh-head', t.lineHeading[i]); st.setProperty('--lh-body', t.lineBody[i]);
+    px('--section-y', S.space.section); px('--gap', S.space.gap); px('--pad', S.space.pad); px('--card-pad', S.space.card);
+    ['sm', 'md', 'lg'].forEach(function (k) { px('--r-' + k, S.radius[k]); });
   };
   T.init = function () { T.applySettings(); addEventListener('resize', T.applySettings); T.set(T.current() || 'dark'); T.applyA11y(); };
 })(window.WRJ);

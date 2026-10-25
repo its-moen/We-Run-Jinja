@@ -19,10 +19,10 @@
   };
   W.c.RouteCard = function (p) {
     var r = p.route;
-    return '<article class="route-card tone-' + r.tone + '" id="' + U.uid(p.ctx || 'route', r.id) + '" data-reveal="zoom">' +
+    return '<article class="route-card tone-' + r.tone + '" id="' + U.uid(p.ctx || 'route', r.id) + '" data-reveal="zoom" data-open-route="' + r.id + '" tabindex="0" role="button" aria-label="Open map for ' + U.esc(r.name) + '">' +
       W.c.RouteMap(r) +
       '<div class="route-body"><h3 class="display h-sm">' + U.esc(r.name) + '</h3>' +
       '<ul class="route-facts"><li><b class="num">' + r.km + '</b> km</li><li><b class="num">' + r.elevation + '</b> m climb</li><li>' + U.esc(r.level) + '</li></ul>' +
-      '<p class="route-when">' + W.icon('calendar') + U.esc(r.when) + '<span>' + W.icon('pin') + U.esc(r.start) + '</span></p></div></article>';
+      '<p class="route-when">' + W.icon('calendar') + U.esc(r.when) + '<span>' + W.icon('pin') + U.esc(r.start) + '</span></p><span class="route-cta">View on map ' + W.icon('arrowUpRight') + '</span></div></article>';
   };
 })(window.WRJ);

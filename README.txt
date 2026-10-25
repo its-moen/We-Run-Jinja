@@ -45,11 +45,22 @@ BEFORE LAUNCH
   Replace them with confirmed information. Gallery photos are crops of the Jinja Bridge image.
   Accessibility panel (footer) and light/dark choice are saved on the visitor's device.
 
-LOOK AND FEEL (v3)  all in js/data/settings.js
+CHECKPOINT 3  Google Sheet content: see sheet/README_SHEET.md (set sheet.url in js/data/settings.js)
+  sheet/Code.gs            Google Apps Script (reads tabs, saves form submissions)
+  sheet/WRJ_Sheet_Template.xlsx  upload to Google Drive for ready made tabs
+  sheet/csv/               the same tabs as CSV files
+  js/core/sheet.js         loader that turns sheet rows into the site dictionaries
+
+NEW IN v6
+  Typography follows the size table in js/data/settings.js (wide, desktop, tablet, mobile).
+  Parallax removed. Secondary content sits in dropdowns (js/components/dropdown.js).
+  Birthdays are one group celebration per month. No individual birthdays are stored or shown.
+  Founders (js/data/founders.js) and videos (js/data/videos.js, plus optional hero video in settings.js).
+  Credits: slim line above every footer, full cards on the Contact page.
+
+LOOK AND FEEL  all in js/data/settings.js
   Font sizes, spacing, corner radius: lists of [desktop, tablet, phone] pixels. No viewport units are used.
   Logo text (WRJ) and logo icon.
   WhatsApp button: number, message, label and idle opacity. Empty number keeps the link blank.
   Header: logo pill, nav pill and theme button are separate pieces. Nav items are in js/data/site.js.
   Credits band above every footer: js/data/credits.js (developers plus anyone else who helped).
-  Parallax: data-float="30" (drifts up/down), data-shiftx="120" (drifts sideways),
-            data-float-children="16" (children drift in alternating directions), data-parallax (backgrounds).

@@ -15,13 +15,12 @@
         '<ul class="ath-meta"><li>' + W.icon('run') + a.runs + ' runs</li><li>' + W.icon('medal') + a.races + ' races</li></ul></div></article>';
   };
   W.c.AthleteProfile = function (a) {
-    var bd = a.birthday.split('-'), d = new Date(2000, +bd[0] - 1, +bd[1]);
     var pbs = Object.keys(a.pb).filter(function (k) { return a.pb[k]; });
     return '<div class="profile">' +
       '<div class="profile-head">' + W.c.Avatar({ athlete: a, size: 'xl' }) +
         '<div><span class="chip">' + U.flag(a.country.code) + ' ' + U.esc(a.country.name) + '</span>' +
         '<h3 class="display h-md" data-split="chars">' + U.esc(a.name) + '</h3>' +
-        '<p class="muted">Member since ' + a.since + '. Birthday ' + U.fmt(d, { day: 'numeric', month: 'long' }) + '.</p></div></div>' +
+        '<p class="muted">Member since ' + a.since + '</p></div></div>' +
       '<p class="profile-bio" data-split="words">' + U.esc(a.bio) + '</p>' +
       (a.legend ? '<p class="chip"><i class="dot"></i>' + U.esc(a.legend) + '</p>' : '') +
       '<div class="profile-stats">' +

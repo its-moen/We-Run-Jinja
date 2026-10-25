@@ -1,0 +1,14 @@
+path,value,show
+site.contact.email,hello@werunjinja.example,TRUE
+site.contact.phone,+256 700 000 000,TRUE
+site.contact.meeting,"Jinja Bridge viewpoint, Njeru side",TRUE
+site.contact.hours,Replies within two days,TRUE
+settings.whatsapp.number,,TRUE
+settings.whatsapp.message,"Hello We Run Jinja, I would like to join a run.",TRUE
+settings.heroVideo.src,,TRUE
+settings.heroVideo.poster,,TRUE
+content.hero.chip,"Locals and foreigners, one Jinja crew",TRUE
+content.hero.text,"A friendly running club on the banks of the Nile. Every pace belongs here, every Saturday.",TRUE
+content.about.mission,"To make running in Jinja social, safe and open to everyone.",TRUE
+settings.maps.apiKey,,TRUE
+settings.maps.mapId,,TRUE

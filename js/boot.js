@@ -5,15 +5,15 @@
 (function () {
   var base = document.currentScript.src.replace(/boot\.js.*$/, '');
   var files = [
-    'core/namespace.js','core/util.js','core/icons.js','core/motion.js','core/scroll.js','core/theme.js','core/ui.js',
-    'data/settings.js','data/site.js','data/athletes.js','data/runs.js','data/events.js','data/content.js','data/developers.js','data/credits.js','data/alumni.js','data/gallery.js',
+    'core/namespace.js','core/util.js','core/icons.js','core/motion.js','core/scroll.js','core/theme.js','core/ui.js','core/sheet.js',
+    'data/settings.js','data/site.js','data/athletes.js','data/runs.js','data/events.js','data/content.js','data/developers.js','data/credits.js','data/founders.js','data/media.js','data/finder.js','data/alumni.js','data/gallery.js',
     'components/button.js','components/sectionHead.js','components/statTile.js','components/avatar.js',
-    'components/athleteCard.js','components/recordCard.js','components/routeCard.js','components/eventCard.js',
+    'components/athleteCard.js','components/recordCard.js','components/routeCard.js','components/routeMap.js','components/eventCard.js',
     'components/carousel.js','components/tabs.js','components/modal.js','components/gallery.js',
     'components/performanceBoard.js','components/leaderboard.js','components/ultimateGrid.js',
     'components/scheduleCard.js','components/birthdayPanel.js','components/roleCard.js',
     'components/developerCard.js','components/alumniCard.js','components/faq.js','components/form.js',
-    'components/marquee.js','components/nextRun.js','components/pageHero.js','components/activityCard.js','components/groupCard.js','components/whatsappFloat.js','components/credits.js','components/header.js','components/footer.js'
+    'components/marquee.js','components/nextRun.js','components/pageHero.js','components/activityCard.js','components/groupCard.js','components/factBar.js','components/howStep.js','components/socialLinks.js','components/oneRoad.js','components/finder.js','components/bgField.js','components/dropdown.js','components/founderCard.js','components/mediaCard.js','components/whatsappFloat.js','components/credits.js','components/header.js','components/footer.js'
   ];
   files.push('pages/' + document.body.dataset.page + '.js');
   var left = files.length;

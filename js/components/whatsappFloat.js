@@ -1,8 +1,10 @@
 /* WhatsAppFloat() : floating chat button on every page. Faint until hover; on phones the first tap reveals it, the second opens chat.
    Number, message and opacity live in data/settings.js */
 (function (W) {
+  /* one place that builds the chat link: hero button and floating icon both use it */
+  W.util.waHref = function (msg) { var w = W.data.settings.whatsapp; return w.number ? 'https://wa.me/' + w.number + '?text=' + encodeURIComponent(msg || w.message) : '#'; };
   W.c.WhatsAppFloat = function () {
-    var w = W.data.settings.whatsapp, href = w.number ? 'https://wa.me/' + w.number + '?text=' + encodeURIComponent(w.message) : '#';
+    var w = W.data.settings.whatsapp, href = W.util.waHref();
     return '<a class="wa-float" id="whatsapp-float" href="' + href + '" target="_blank" rel="noopener" aria-label="' + W.util.esc(w.label) + '" style="--wa-idle:' + w.idleOpacity + '"><span class="wa-label">' + W.util.esc(w.label) + '</span><span class="wa-ic">' + W.icon('whatsapp') + '</span></a>';
   };
   W.ui.inits.push(function (scope) {

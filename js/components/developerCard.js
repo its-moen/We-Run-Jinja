@@ -1,7 +1,10 @@
-/* DeveloperCard({dev, ctx}) : credit card with blank social links (edit in data/developers.js) */
+/* DeveloperCard({dev, ctx}) : same card as the founders. Photo area on top (set photo:'assets/developers/name.jpg'),
+   then role, name, a short line, bio and social links. Data: data/developers.js */
 WRJ.c.DeveloperCard = function (p) {
   var d = p.dev, U = WRJ.util;
-  return '<article class="dev-card glass" id="' + U.uid(p.ctx || 'dev', d.id) + '" data-reveal><div class="dev-top">' + WRJ.c.Avatar({ athlete: { name: d.name, hue: d.hue, photo: d.photo || null }, size: 'lg' }) +
-    '<div><h3 class="display h-sm">' + U.esc(d.name) + '</h3><span class="chip">' + U.esc(d.role) + '</span></div></div><p class="muted">' + U.esc(d.text) + '</p>' +
-    '<ul class="social-row">' + U.list(d.links, function (l) { return '<li><a class="icon-btn" href="' + l.href + '" aria-label="' + U.esc(d.name + ' ' + l.label) + '">' + WRJ.icon(l.icon) + '</a></li>'; }) + '</ul></article>';
+  return '<article class="founder dev solid" id="' + U.uid(p.ctx || 'dev', d.id) + '" data-reveal>' +
+    '<div class="founder-photo" style="--h:' + d.hue + '">' + (d.photo ? '<img src="' + U.esc(d.photo) + '" alt="' + U.esc(d.name) + '" loading="lazy">' : '<b aria-hidden="true">' + U.initials(d.name) + '</b>') + '</div>' +
+    '<div class="founder-body"><span class="chip">' + U.esc(d.role) + '</span><h3 class="display h-md">' + U.esc(d.name) + '</h3>' +
+    (d.quote ? '<blockquote>' + U.esc(d.quote) + '</blockquote>' : '') + '<p class="muted">' + U.esc(d.text) + '</p>' +
+    WRJ.c.SocialRow({ links: d.links, owner: d.name, ctx: p.ctx || 'dev' }) + '</div></article>';
 };

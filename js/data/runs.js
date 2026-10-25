@@ -36,3 +36,17 @@ WRJ.data.routes = [
   { id: 'walukuba',     name: 'Walukuba Hills',     km: 6.2, elevation: 118, level: 'Hard', when: 'Thursday', start: 'Walukuba junction', tone: 'light',
     points: [[8,50],[20,40],[30,46],[42,28],[54,36],[66,16],[78,24],[92,10]], marks: [{ at: 4, label: '3 km' }] }
 ];
+
+/* Map details per route id. Used by the route pop up (click a route card).
+   center: [lat, lng]   landmarks: [{name, lat, lng, note}]
+   path: [[lat,lng], ...] OR polyline: an encoded Google/Strava polyline string for the exact GPS trace.
+   Without path/polyline the pop up draws an approximate line from the sketch. EVERY coordinate below is an approximate
+   placeholder: check each one on Google Maps before publishing. */
+WRJ.data.routeGeo = {
+  'nile-run':    { center: [0.4300, 33.2100], landmarks: [ { name: 'Jinja Bridge viewpoint', lat: 0.4372, lng: 33.2159, note: 'Saturday start and finish' }, { name: 'Source of the Nile gardens', lat: 0.4189, lng: 33.2184, note: 'Water and photo stop' } ] },
+  'seed-loop':   { center: [0.4372, 33.2159], landmarks: [ { name: 'Jinja Bridge viewpoint', lat: 0.4372, lng: 33.2159, note: 'Start, finish and warm up' }, { name: 'Turn around cone', lat: 0.4390, lng: 33.2120, note: 'Halfway point' } ] },
+  'source-loop': { center: [0.4189, 33.2184], landmarks: [ { name: 'Source of the Nile gardens', lat: 0.4189, lng: 33.2184, note: 'Start and finish' }, { name: 'River path bend', lat: 0.4210, lng: 33.2150, note: 'Best view of the water' } ] },
+  'bujagali':    { center: [0.4985, 33.1430], landmarks: [ { name: 'Bujagali Falls', lat: 0.4985, lng: 33.1430, note: 'Turnaround and rest' }, { name: 'Bujagali road junction', lat: 0.4880, lng: 33.1560, note: 'Start' } ] },
+  'town-loop':   { center: [0.4244, 33.2041], landmarks: [ { name: 'Jinja Main Street', lat: 0.4244, lng: 33.2041, note: 'Start and finish' }, { name: 'Clock tower roundabout', lat: 0.4252, lng: 33.2065, note: 'Marshal point' } ] },
+  'walukuba':    { center: [0.4390, 33.2210], landmarks: [ { name: 'Walukuba junction', lat: 0.4390, lng: 33.2210, note: 'Start' }, { name: 'Hill top', lat: 0.4420, lng: 33.2260, note: 'Hill repeat turn' } ] }
+};

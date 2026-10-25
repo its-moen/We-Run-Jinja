@@ -61,7 +61,7 @@
     io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         var el = e.target;
-        if (!e.isIntersecting) { if (el.classList.contains('in')) { el.classList.remove('in'); if (el._leave) el._leave(); } return; }
+        if (!e.isIntersecting) { if (el.closest('.carousel-track')) return; if (el.classList.contains('in')) { el.classList.remove('in'); if (el._leave) el._leave(); } return; }
         var enough = e.intersectionRatio >= 0.14 || e.intersectionRect.height > innerHeight * 0.28;
         if (enough && !el.classList.contains('in')) {
           if (el.dataset.delay) el.style.setProperty('--d', el.dataset.delay + 'ms');
@@ -80,7 +80,10 @@
     });
     scope.querySelectorAll('[data-split],[data-reveal],[data-count]').forEach(function (el) {
       if (el._m) return; el._m = true;
-      if (el.dataset.split) split(el);
+      if (el.dataset.split) {
+        var all = W.data.settings.motion && W.data.settings.motion.splitAll;
+        if (all || el.closest('.hero,.page-hero')) split(el); else el.setAttribute('data-reveal', 'up');
+      }
       if (el.dataset.count) counter(el);
       o.observe(el);
     });

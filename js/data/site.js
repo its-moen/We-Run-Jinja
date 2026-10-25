@@ -34,7 +34,7 @@ WRJ.data.site = {
   ],
   /* dow: 0 Sunday ... 6 Saturday. main:true marks the weekly flagship run */
   schedule: [
-    { id: 'saturday',  day: 'Saturday',  dow: 6, time: '06:30', title: 'Club long run',    place: 'Jinja Bridge viewpoint', main: true,  note: 'Our main run of the week. Seed walkers go 1 to 4 km, runners 5 to 15 km. Coffee after.' },
+    { id: 'saturday',  day: 'Saturday',  dow: 6, time: '06:30', title: 'Club long run',    place: 'Jinja Bridge viewpoint', main: true,  note: 'Our main run of the week. Seed walkers go 1 to 4 km, runners 3 to 15 km. Coffee after.' },
     { id: 'wednesday', day: 'Wednesday', dow: 3, time: '17:45', title: 'Midweek social',   place: 'Jinja town loop',        main: false, note: 'Easy 5 km with chat. Good for first timers and visitors.' },
     { id: 'thursday',  day: 'Thursday',  dow: 4, time: '17:45', title: 'Tempo and hills',  place: 'Walukuba hills',         main: false, note: 'Short, sharp session for those chasing a race goal.' },
     { id: 'monday',    day: 'Monday',    dow: 1, time: '17:45', title: 'Recovery jog',     place: 'Source of the Nile path', main: false, note: 'Slow shake out to start the week. Walkers welcome.' }

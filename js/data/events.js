@@ -14,7 +14,7 @@ WRJ.data.activities = [
 WRJ.data.groups = [
   { id: 'seed-walkers', icon: 'users', title: 'Seed walkers', range: '1 to 4 km', tag: 'Walk or easy jog', text: 'A gentle walk or slow jog with no pressure. For beginners, families, recovery and anyone not ready to run fast.' },
   { id: 'aerobics',     icon: 'heart', title: 'Aerobics',     range: 'Music and movement', tag: 'Fitness', text: 'Led aerobics to warm up or wind down. No distance, just good energy.' },
-  { id: 'steady',       icon: 'run',   title: 'Steady runners', range: '5 to 10 km', tag: 'Social pace', text: 'Relaxed running and conversation. Our biggest group on Saturdays.' },
+  { id: 'steady',       icon: 'run',   title: 'Steady runners', range: '3 to 10 km', tag: 'Social pace', text: 'Relaxed running and conversation. Some Saturdays we keep it to 3 km, other days we stretch to 10 km.' },
   { id: 'long',         icon: 'medal', title: 'Long runners', range: '10 to 21 km', tag: 'Race training', text: 'Longer loops for marathon and half marathon goals.' }
 ];
 
@@ -30,5 +30,5 @@ WRJ.data.events = [
 WRJ.data.birthdayRun = {
   rule: 'Every third Saturday of the month',
   time: '06:30', place: 'Jinja Bridge viewpoint',
-  text: 'We run the first loop together, sing, and share cake at the finish for everyone with a birthday that month.'
+  text: 'One celebration for the whole month. We run the first loop together and share cake at the finish for everyone with a birthday that month.'
 };

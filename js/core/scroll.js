@@ -5,7 +5,12 @@
 (function (W) {
   var S = W.scroll = {}, ticking = false;
   var clamp = function (v, a, b) { return Math.min(Math.max(v, a), b); };
-  function fullScreens() { if (S._w === innerWidth && S._h) return; S._w = innerWidth; S._h = innerHeight; document.querySelectorAll('[data-fullscreen]').forEach(function (el) { el.style.minHeight = S._h + 'px'; }); }
+  function fullScreens() {
+    if (S._w === innerWidth && S._h) return; S._w = innerWidth; S._h = innerHeight;
+    document.querySelectorAll('[data-fullscreen]').forEach(function (el) { el.style.minHeight = S._h + 'px'; });
+    var hs = W.data.settings.hero || {}, r = (hs.ratio || [0.38, 0.4, 0.5, 0.52])[W.theme.sizeIndex()];   /* inner page heroes: a share of the window height, in px */
+    document.querySelectorAll('[data-hero-ratio]').forEach(function (el) { el.style.minHeight = Math.round(Math.min(Math.max(S._h * r, hs.min || 300), hs.max || 640)) + 'px'; });
+  }
   function frame() {
     ticking = false;
     var y = scrollY, doc = document.documentElement, bar = document.querySelector('.progress-line'), hd = document.querySelector('.site-header');

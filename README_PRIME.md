@@ -1,4 +1,4 @@
-# We Run Jinja Prime (v8)
+# We Run Jinja Prime (v9)
 
 Claude's professional take on the same club site. Same codebase and dictionaries as v6, with a different structure and the finishing layer a launch needs.
 
@@ -51,3 +51,9 @@ Claude's professional take on the same club site. Same codebase and dictionaries
 - **Contact is lighter:** contact details and form, the story and timeline, developers, alumni. Values, social rows and the founders cards were removed from this page (founders live on Home, socials in the footer).
 - **Animated backgrounds** (`js/components/bgField.js`): flowing waves on Events, slow ripples on Contact. Same structure as a particle field (resize, frame loop, pause when the tab is hidden, still frame for reduced motion). A third style, `particles` (depth squares), is ready to switch on for any page.
 - **Dials** in `js/data/settings.js` -> `background`: speed, opacity, fps cap, plus waves (layers, amplitude, wavelength) and ripples (rings, maxRipples, interval, maxRadius). Visitors get a pause button, saved on their device, and "Reduce motion" turns it into still art.
+
+
+## New in v9: hero rules
+- Home hero is one clean screen: label, title, one sentence, one main button. On phone and tablet the "next run" card moves just below the hero (it stays in the hero on wide screens).
+- Events and Contact heroes are sized as a share of the window height (`settings.hero.ratio`: wide .38, desktop .40, tablet .50, phone .52, limited to 300-640 px), so the image is bigger and the content starts lower on phone and tablet.
+- Page titles use the top of your size table (64 / 52 / 40 / 34 px) with a short accent bar underneath.

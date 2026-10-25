@@ -27,7 +27,13 @@
     var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//We Run Jinja//EN', 'BEGIN:VEVENT', 'UID:' + p[0] + '@werunjinja', 'DTSTAMP:' + f(new Date()), 'DTSTART:' + f(d), 'DURATION:PT2H', 'SUMMARY:We Run Jinja: ' + p[1], 'LOCATION:' + p[2], 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'we-run-jinja.ics'; document.body.appendChild(a); a.click(); a.remove();
   });
+  /* wide screens: card sits in the hero. phone and tablet: it moves just below the hero so the first screen stays clean */
+  function place() {
+    var el = document.getElementById('next-run'), below = document.getElementById('next-run-below'), grid = document.querySelector('.hero-grid'); if (!el || !below || !grid) return;
+    var narrow = innerWidth < 1024; if (narrow && el.parentElement !== below) below.appendChild(el); else if (!narrow && el.parentElement !== grid) grid.appendChild(el);
+  }
   W.ui.inits.push(function (scope) {
+    if (scope === document && !W._nrPlace) { W._nrPlace = true; place(); addEventListener('resize', place); }
     var el = scope.querySelector && scope.querySelector('#next-run'); if (!el || el._n) return; el._n = true;
     var t = +el.dataset.target, q = function (u) { return el.querySelector('[data-u=' + u + ']'); };
     (function tick() {

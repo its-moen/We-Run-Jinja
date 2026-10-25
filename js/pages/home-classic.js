@@ -11,7 +11,7 @@ WRJ.pages['home-classic'] = {
       '<div class="container hero-grid"><div class="hero-copy"><span class="chip" data-reveal="fade"><i class="dot"></i>' + C.hero.chip + '</span>' +
       '<h1 class="display h-xl" data-split="chars">' + C.hero.title + '</h1><p class="lead" data-split="words">' + C.hero.text + '</p>' +
       '<div class="row">' + W.c.Button({ label: 'Join a Saturday run', href: '#join' }) + W.c.Button({ label: 'Explore routes', href: '#routes', variant: 'ghost', icon: 'arrowDown' }) + '</div></div>' +
-      W.c.NextRun() + '</div><a class="scroll-cue" href="#about-snapshot" aria-label="Scroll to the next section"><span>Scroll</span>' + W.icon('arrowDown') + '</a></section>' + W.c.Marquee({ items: D.site.marquee });
+      W.c.NextRun() + '</div><a class="scroll-cue" href="#about-snapshot" aria-label="Scroll to the next section"><span>Scroll</span>' + W.icon('arrowDown') + '</a></section>' + W.c.Marquee({ items: D.site.marquee }) + '<div class="container" id="next-run-below"></div>';
 
     var about = '<section class="section" id="about-snapshot"><div class="container">' +
       W.c.SectionHead({ label: 'Who we are', title: 'Locals and foreigners.<br>One road.', text: C.about.mission }) +

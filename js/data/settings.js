@@ -4,7 +4,7 @@ WRJ.data.settings = {
   breakpoints: { wide: 1440, desktop: 1024, tablet: 768 },
   logo: { text: 'WRJ', mark: 'run', label: 'We Run Jinja home' },
   type: {
-    h1: [60, 48, 38, 32],        /* page title (main hero word) */
+    h1: [64, 52, 40, 34],        /* page title (main hero word): top of your 56-64 / 44-52 / 36-40 / 30-34 ranges */
     h2: [44, 38, 31, 26],        /* section titles */
     h3: [31, 28, 25, 21],        /* card titles, big numbers */
     h4: [25, 23, 21, 19],
@@ -32,6 +32,10 @@ WRJ.data.settings = {
     home: 'none',
     events: { type: 'waves', speed: 1, opacity: 1, fps: 60, layers: 5, amplitude: 26, wavelength: 460 },
     contact: { type: 'ripples', speed: 1, opacity: 1, fps: 60, rings: 3, maxRipples: 5, interval: 2.8, maxRadius: 340 }
+  },
+  hero: {                        /* inner page heroes (Events, Contact): height as a share of the window height, [wide, desktop, tablet, phone] */
+    ratio: [0.38, 0.40, 0.50, 0.52],
+    min: 300, max: 640           /* px limits */
   },
   motion: { splitAll: false },   /* true = every heading animates letter by letter. false = only the main hero word */
   heroVideo: { src: '', poster: '' },   /* e.g. 'assets/video/hero.mp4' for a muted looping hero video */

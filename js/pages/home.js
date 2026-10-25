@@ -13,7 +13,7 @@ WRJ.pages.home = {
       '<div class="row">' + W.c.Button({ label: 'Join on WhatsApp', href: U.waHref(), variant: 'whatsapp', icon: 'whatsapp', attrs: 'target="_blank" rel="noopener"' }) + W.c.Button({ label: 'See this week', href: '#this-week', variant: 'ghost', icon: 'arrowDown' }) + '</div></div>' +
       W.c.NextRun() + '</div><a class="scroll-cue" href="#this-week" aria-label="Scroll to the next section"><span>Scroll</span>' + W.icon('arrowDown') + '</a></section>';
 
-    var intro = '<section class="section-tight" id="this-week"><div class="container">' + W.c.FactBar({ facts: C.facts, ctx: 'home' }) + '</div></section>' +
+    var intro = '<section class="section-tight" id="this-week"><div class="container"><div id="next-run-below"></div>' + W.c.FactBar({ facts: C.facts, ctx: 'home' }) + '</div></section>' +
       '<section class="section" id="how-it-works"><div class="container">' + W.c.SectionHead({ label: 'New here?', title: 'How it works', text: 'Three steps from your sofa to the start line.' }) +
       '<div class="grid cols-3" data-stagger>' + U.list(C.steps, function (s) { return W.c.HowStep({ step: s, ctx: 'home' }); }) + '</div></div></section>';
 

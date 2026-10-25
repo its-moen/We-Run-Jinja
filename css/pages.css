@@ -465,3 +465,20 @@ html[data-theme=light] .field-err{color:#c92a2a}
 .dev-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--gap)}
 .dev-grid>.founder{flex:1 1 260px;max-width:360px}
 .founder.dev .founder-photo{aspect-ratio:16/10}
+
+
+/* ==== hero polish for phone and tablet ==== */
+.page-hero{padding:96px 0 32px;align-items:end}
+.page-hero-bg{background-position:center 35%}
+.page-hero-in h1::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--accent);margin-top:14px}
+#next-run-below{display:none}
+@media (max-width:1023px){
+  .hero .next-run{display:grid}
+  .hero .btn-ghost{display:none}
+  #next-run-below{display:block;margin-bottom:var(--gap)}
+  #next-run-below:empty{display:none;margin:0}
+  #next-run-below .next-run{max-width:none;justify-self:stretch}
+  .hero{padding-bottom:72px}
+  .hero-copy{gap:12px}
+  .hero-grid{grid-template-columns:1fr}
+}

@@ -11,7 +11,7 @@ WRJ.pages.home = {
       '<div class="container hero-grid"><div class="hero-copy"><span class="chip" data-reveal="fade"><i class="dot"></i>' + C.hero.chip + '</span>' +
       '<h1 class="display h-xl" data-split="chars">' + C.hero.title + '</h1><p class="lead" data-split="words">' + C.hero.text + '</p>' +
       '<div class="row">' + W.c.Button({ label: 'Join on WhatsApp', href: U.waHref(), variant: 'whatsapp', icon: 'whatsapp', attrs: 'target="_blank" rel="noopener"' }) + W.c.Button({ label: 'See this week', href: '#this-week', variant: 'ghost', icon: 'arrowDown' }) + '</div></div>' +
-      W.c.NextRun() + '</div><a class="scroll-cue" href="#this-week" aria-label="Scroll to the next section"><span>Scroll</span>' + W.icon('arrowDown') + '</a></section>';
+      W.c.NextRun() + '</div><p class="sr">We Run Jinja is a friendly running and walking club in Jinja, Uganda. Everyone is welcome, from 1 km walkers to 21 km runners.</p><a class="scroll-cue" href="#belonging" aria-label="Scroll to the next section"><span>Scroll</span>' + W.icon('arrowDown') + '</a></section>';
 
     var intro = '<section class="section-tight" id="this-week"><div class="container"><div id="next-run-below"></div>' + W.c.FactBar({ facts: C.facts, ctx: 'home' }) + '</div></section>' +
       '<section class="section" id="how-it-works"><div class="container">' + W.c.SectionHead({ label: 'New here?', title: 'How it works', text: 'Three steps from your sofa to the start line.' }) +
@@ -62,6 +62,6 @@ WRJ.pages.home = {
 
     var faq = '<section class="section" id="faq"><div class="container narrow">' + W.c.SectionHead({ label: 'Good to know', title: 'First run? No worries' }) + W.c.Faq({ items: C.faq, ctx: 'home' }) + '</div></section>';
 
-    return hero + intro + W.c.OneRoad() + groups + W.c.Finder() + routes + records + founders + media + strip + book + join + faq;
+    return hero + W.c.Belonging() + intro + W.c.OneRoad() + groups + W.c.Finder() + routes + records + founders + media + strip + book + join + faq;
   }
 };

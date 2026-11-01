@@ -67,6 +67,9 @@
     chain:       function (r) { W.data.content.chain = list(r); },
     faq:         function (r) { W.data.content.faq = list(r); },
     gallery:     function (r) { W.data.gallery = list(r); },
+    photos:      function (r) { W.data.photos = list(r); },
+    promises:    function (r) { W.data.content.belonging.promises = list(r); },
+    saturday:    function (r) { W.data.content.saturday.steps = list(r); },
     alumni:      function (r) { W.data.alumni = list(r); },
     media:       function (r) { W.data.media = list(r); },
     videos:      function (r) { W.data.media = list(r); },   /* old tab name, still accepted */

@@ -10,6 +10,8 @@ WRJ.pages.events = {
       return '<li class="' + (s ? 'on' : '') + (s && s.main ? ' main' : '') + '" id="week-' + d.toLowerCase() + '"><b class="display">' + d + '</b><small>' + (s ? s.time : 'Rest') + '</small></li>'; }).join('') + '</ul>';
     var hero = W.c.PageHero({ chip: 'Mainly Saturdays, sometimes midweek', title: 'Events', text: 'Weekly runs, away marathons, charity miles and one birthday celebration every third Saturday.', extra: strip });
 
+    var strip2 = '<section class="section-tight" id="saturday-in-pictures"><div class="container">' + W.c.PhotoMosaic({ tag: 'hero', n: 5, ctx: 'events-hero' }) + '</div></section>';
+
     var rhythm = '<section class="section" id="rhythm"><div class="container">' + W.c.SectionHead({ label: 'When we run', title: 'The weekly rhythm', text: 'Saturday is our main run. Monday, Wednesday and Thursday sessions pop up through the month.' }) +
       '<div class="sched-grid">' + U.list(D.site.schedule, function (s) { return W.c.ScheduleCard({ slot: s, ctx: 'events' }); }) + '</div></div></section>';
 
@@ -24,7 +26,7 @@ WRJ.pages.events = {
       '<div class="bday-feature-main"><span class="chip">' + W.icon('cake') + b.rule + '</span><h2 class="display h-lg" data-split="chars">Monthly birthday celebration</h2><p class="lead" data-split="words">' + U.esc(b.text) + '</p>' +
       '<ul class="event-meta"><li>' + W.icon('clock') + b.time + '</li><li>' + W.icon('pin') + U.esc(b.place) + '</li></ul>' +
       '<ol class="next-dates" data-stagger>' + nexts.map(function (d, i) { return '<li id="birthday-date-' + (i + 1) + '"><b class="display">' + d.getDate() + '</b><span>' + U.fmt(d, { weekday: 'long', month: 'long', year: 'numeric' }) + '</span></li>'; }).join('') + '</ol></div>' +
-      '<div class="bday-feature-side glass" data-reveal><h3 class="display h-sm">One party, whole month</h3>' + W.c.BirthdayPanel({ ctx: 'events' }) + '</div></div></div></section>';
+      '<div class="bday-feature-side glass" data-reveal>' + (U.photo('birthday', 0) ? '<img class="bday-photo" src="' + U.esc(U.photo('birthday', 0).src) + '" alt="' + U.esc(U.photo('birthday', 0).alt || 'Birthday celebration') + '" loading="lazy">' : '') + '<h3 class="display h-sm">One party, whole month</h3>' + W.c.BirthdayPanel({ ctx: 'events' }) + '</div></div></div></section>';
 
     /* upcoming: one-off events + generated birthday runs + next two regular Saturdays */
     var list = D.events.filter(function (e) { return U.date(e.date) >= today; });
@@ -51,6 +53,6 @@ WRJ.pages.events = {
         W.c.Dropdown({ id: 'athletes', icon: 'users', title: 'Athletes', summary: 'Tap a runner for a simple profile', body: athletesBody }) +
       '</div></div></section>';
 
-    return hero + rhythm + groups + acts + birthday + upcoming + more;
+    return hero + strip2 + rhythm + groups + W.c.SaturdaySteps() + acts + birthday + W.c.FindUs() + upcoming + more;
   }
 };

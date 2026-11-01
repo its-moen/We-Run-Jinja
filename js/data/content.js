@@ -32,6 +32,36 @@ WRJ.data.content = {
     localsLabel: 'Locals', foreignersLabel: 'Visitors and expats', mergedLabel: 'One crew',
     stats: { locals: 52, foreigners: 34, countries: 14 }   /* shown as numbers. Update when your membership changes */
   },
+  belonging: {
+    label: 'Come as you are',
+    title: 'You belong here,<br>exactly as you are',
+    text: 'Fast, slow, brand new or coming back, in old shoes or new ones. Most of us started nervous too. Nobody here is judging how you look or how far you go.',
+    promises: [
+      { icon: 'users', title: 'Walkers set off first',   text: 'Seed walkers start the day, so nobody feels watched from behind.' },
+      { icon: 'heart', title: 'Last place gets the loudest cheer', text: 'Every finisher is clapped in. Every time.' },
+      { icon: 'clock', title: 'No timing unless you ask', text: 'No leaderboard pressure. Your pace is your business.' },
+      { icon: 'star',  title: 'Any shoes, any clothes',   text: 'Wear what you have. Nobody checks your gear.' }
+    ],
+    cta: 'Say hello'
+  },
+  saturday: {
+    label: 'What to expect',
+    title: 'A Saturday, step by step',
+    text: 'Here is how a normal Saturday goes, so nothing is a surprise.',
+    steps: [
+      { n: 1, title: 'Meet at the  Sikia - Jinja', text: 'Arrive around 06:15. Someone in a club shirt will say hello.', tag: 'meet' },
+      { n: 2, title: 'Warm up together',   text: 'Ten easy minutes of moving, with music some days.', tag: 'warmup' },
+      { n: 3, title: 'Run or walk',        text: 'Pick your group and go at your pace. Nobody is left behind.', tag: 'run' },
+      { n: 4, title: 'Coffee and stories', text: 'We stay, chat and cheer the last finishers in.', tag: 'coffee' }
+    ]
+  },
+  findUs: {
+    label: 'Find us',
+    title: 'Where to stand on Saturday',
+    text: 'Look for the tall bridge pylon and people in orange shirts. If you cannot find us, message and we will come and get you.',
+    place: 'Jinja Bridge viewpoint, Njeru side',
+    mapsQuery: 'Jinja Bridge viewpoint Njeru Uganda'
+  },
   facts: [
     { icon: 'calendar', label: 'When',  value: 'Saturdays, 06:30' },
     { icon: 'pin',      label: 'Where', value: 'Jinja Bridge viewpoint' },
@@ -41,7 +71,7 @@ WRJ.data.content = {
   steps: [
     { n: 1, icon: 'whatsapp', title: 'Say hello',        text: 'Message us on WhatsApp or fill in the form. Tell us how you like to move.' },
     { n: 2, icon: 'users',    title: 'Pick your group',  text: 'Seed walkers 1 to 4 km, aerobics, steady runners or long runners.' },
-    { n: 3, icon: 'run',      title: 'Show up Saturday', text: 'Meet at the bridge, move together and stay for coffee. Nobody is left behind.' }
+    { n: 3, icon: 'run',      title: 'Show up Saturday', text: 'Meet at the  Sikia Cafe - Jinja, move together and stay for coffee. Nobody is left behind.' }
   ],
   faq: [
     { q: 'Do I need to be fast?', a: 'No. We run in pace groups and nobody is left behind. Walkers are welcome too.' },

@@ -25,6 +25,9 @@ var TABS = {
   promos: ['id','title','text','code','show'],
   faq: ['q','a','show'],
   gallery: ['id','src','alt','caption','ratio','show'],
+  photos: ['id','src','alt','caption','tag','show'],
+  promises: ['id','icon','title','text','show'],
+  saturday: ['n','title','text','tag','show'],
   media: ['id','type','title','caption','youtubeId','src','poster','duration','show'],
   socials: ['id','label','icon','href','show'],
   settings: ['path','value','show']

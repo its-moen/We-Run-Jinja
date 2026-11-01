@@ -482,3 +482,44 @@ html[data-theme=light] .field-err{color:#c92a2a}
   .hero-copy{gap:12px}
   .hero-grid{grid-template-columns:1fr}
 }
+
+/* ==== belonging, photo mosaic, saturday steps, find us, photo cards ==== */
+.belong{display:grid;grid-template-columns:1.05fr 1fr;gap:calc(var(--gap)*2);align-items:center}
+.belong-copy{display:grid;gap:14px;justify-items:start}
+.promises{display:grid;gap:10px;width:100%}
+.promises li{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line)}
+.promises li>span:last-child{display:grid;line-height:1.35}.promises b{font-size:var(--fs-text-sm);font-weight:600}.promises small{color:var(--muted);font-size:var(--fs-small)}
+.belong-media{display:grid;gap:var(--gap)}
+.belong-lead,.belong-face{margin:0;position:relative;overflow:hidden;border-radius:var(--r-lg)}
+.belong-lead{aspect-ratio:16/10}.belong-lead img,.belong-face img{width:100%;height:100%;object-fit:cover;display:block}
+.belong-lead figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 12px;color:#fff;font-weight:600;font-size:var(--fs-text-sm);background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.belong-faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:var(--gap)}
+.belong-face{aspect-ratio:4/3}
+@media (max-width:860px){.belong{grid-template-columns:1fr}}
+.mosaic{display:grid;gap:var(--gap);grid-template-columns:repeat(4,1fr);grid-auto-rows:150px}
+.mosaic-tile{position:relative;margin:0;overflow:hidden;border-radius:var(--r-md)}
+.mosaic-tile:first-child{grid-column:span 2;grid-row:span 2}
+.mosaic-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.mosaic-tile:hover img{transform:scale(1.06)}
+.mosaic-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;color:#fff;font-size:var(--fs-small);font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+@media (max-width:700px){.mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}.mosaic-tile:first-child{grid-column:span 2;grid-row:span 2}.mosaic-tile:nth-child(5){display:none}}
+.steps-photo{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.step-photo{display:grid;gap:10px}
+.step-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r-md);background:var(--surface-2)}
+.step-img img{width:100%;height:100%;object-fit:cover;display:block}
+.step-n{position:absolute;left:10px;top:10px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:var(--fs-h6)}
+.step-text{display:grid;gap:2px}.step-text p{font-size:var(--fs-text-sm)}
+@media (max-width:900px){.steps-photo{grid-template-columns:repeat(2,1fr)}}
+.find{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);padding:0;overflow:hidden;align-items:stretch}
+.find-photo{position:relative;min-height:240px}.find-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.find-photo .chip{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.5);color:#fff;border-color:transparent}
+.find-copy{display:grid;gap:12px;align-content:center;justify-items:start;padding:calc(var(--card-pad)*1.4)}
+.find-place{display:flex;align-items:center;gap:8px;font-size:var(--fs-text-sm)}
+@media (max-width:760px){.find{grid-template-columns:1fr}.find-photo{min-height:200px}}
+.event-card.has-photo{grid-template-columns:auto 1fr 150px;align-items:stretch}
+.event-photo{border-radius:var(--r-md);overflow:hidden;min-height:96px}.event-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:640px){.event-card.has-photo{grid-template-columns:auto 1fr}.event-photo{grid-column:1/-1;min-height:140px;order:-1}}
+.group-photo{margin:calc(var(--card-pad)*-1) calc(var(--card-pad)*-1) 6px;aspect-ratio:16/9;overflow:hidden;border-radius:var(--r-md) var(--r-md) 0 0}.group-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.bday-photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-md)}
+
+@media (max-width:640px){.event-photo{min-height:110px}.event-card.has-photo{gap:var(--gap)}}

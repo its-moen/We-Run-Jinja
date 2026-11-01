@@ -50,6 +50,6 @@ WRJ.pages['home-classic'] = {
 
     var faq = '<section class="section" id="faq"><div class="container narrow">' + W.c.SectionHead({ label: 'Good to know', title: 'First run? No worries' }) + W.c.Faq({ items: C.faq, ctx: 'home' }) + '</div></section>';
 
-    return hero + about + W.c.OneRoad() + groups + W.c.Finder() + routes + records + book + join + faq;
+    return hero + W.c.Belonging() + about + W.c.OneRoad() + groups + W.c.Finder() + routes + records + book + join + faq;
   }
 };

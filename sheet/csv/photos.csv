@@ -1,0 +1,19 @@
+id,src,alt,caption,tag,show
+demo-hero-1,assets/gallery/g1.jpg,Runners start beside Jinja Bridge,Saturday start,hero,TRUE
+demo-hero-2,assets/gallery/g4.jpg,Sun low over the Nile,Golden hour,hero,TRUE
+demo-hero-3,assets/gallery/g3.jpg,The road across the bridge,Open road,hero,TRUE
+demo-hero-4,assets/gallery/g8.jpg,Steel cable detail,Steel and light,hero,TRUE
+demo-hero-5,assets/gallery/g6.jpg,Big sky over Jinja,Big sky mornings,hero,TRUE
+demo-people-1,assets/gallery/g2.jpg,Club members together,Together at the finish,people,TRUE
+demo-people-2,assets/gallery/g5.jpg,Members stretching,Warm up together,people,TRUE
+demo-people-3,assets/gallery/g9.jpg,Members walking,Walkers go first,people,TRUE
+demo-meet,assets/gallery/g1.jpg,Meeting at the bridge,Meet at the bridge,meet,TRUE
+demo-warmup,assets/gallery/g7.jpg,Warm up,Warm up together,warmup,TRUE
+demo-run,assets/gallery/g3.jpg,Running across the bridge,Run or walk your way,run,TRUE
+demo-coffee,assets/gallery/g4.jpg,Coffee after the run,Coffee and stories,coffee,TRUE
+demo-seed,assets/gallery/g5.jpg,Seed walkers,Seed walkers,seed-walkers,TRUE
+demo-aerobics,assets/gallery/g9.jpg,Aerobics session,Aerobics,aerobics,TRUE
+demo-steady,assets/gallery/g2.jpg,Steady runners,Steady runners,steady,TRUE
+demo-long,assets/gallery/g8.jpg,Long runners,Long runners,long,TRUE
+demo-spot,assets/gallery/g6.jpg,The meeting spot,Look for the bridge pylon,spot,TRUE
+demo-birthday,assets/gallery/g4.jpg,Birthday celebration,Cake after the run,birthday,TRUE

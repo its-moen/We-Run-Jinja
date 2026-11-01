@@ -40,7 +40,8 @@ WRJ.data.settings = {
   motion: { splitAll: false },   /* true = every heading animates letter by letter. false = only the main hero word */
   heroVideo: { src: '', poster: '' },   /* e.g. 'assets/video/hero.mp4' for a muted looping hero video */
   whatsapp: {
-    number: '',                  /* e.g. '256700000000' (country code, no plus). Empty keeps the link blank */
+    number: '',                  /* e.g. '256700000000' (country code, no plus). Best: a club WhatsApp Business number */
+    link: '',                    /* OR paste a group invite link, e.g. 'https://chat.whatsapp.com/XXXX'. Used when number is empty */
     message: 'Hello We Run Jinja, I would like to join a run.',
     label: 'Chat on WhatsApp',
     idleOpacity: 0.9

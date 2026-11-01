@@ -17,7 +17,7 @@ Your club admins edit rows in a Google Sheet. The website reads them. Nobody tou
 - After you edit the Apps Script code you must make a **new deployment version** for changes to go live.
 
 ## Tabs (one row per item)
-athletes, records, performances, routes, schedule, events, groups, activities, founders, developers, credits, alumni, chain, news, promos, faq, gallery, media, socials, settings.
+athletes, records, performances, routes, schedule, events, groups, activities, founders, developers, credits, alumni, chain, news, promos, faq, gallery, photos, media, promises, saturday, socials, settings.
 (`media` holds films AND photos. The old tab name `videos` still works.)
 
 ## Column rules
@@ -31,7 +31,7 @@ athletes, records, performances, routes, schedule, events, groups, activities, f
 | `points` (routes) | `10,44;22,38;35,42` (x,y from 0-100 and 0-60) |
 | `marks` (routes) | `2:2 km|5:6 km` (point number : label) |
 | `main` (schedule) | TRUE for the main weekly run |
-| photos | file path such as `assets/athletes/alex.jpg` |
+| photos | file path such as `assets/photos/alex.webp`. The `photos` tab lists every picture with a `tag` that decides where it shows (see js/data/photos.js) |
 | `type` + `youtubeId` / `src` (media) | `youtube` + the part after `v=`, or `file` + a video path, or `image` + a photo path |
 | `center` (routes) | `0.4372,33.2159` (lat,lng) |
 | `landmarks` (routes) | `Source of the Nile:0.4189,33.2184:Water stop|Bujagali Falls:0.4985,33.1430:Turnaround` |

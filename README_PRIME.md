@@ -1,4 +1,4 @@
-# We Run Jinja Prime (v9)
+# We Run Jinja Prime (v10)
 
 Claude's professional take on the same club site. Same codebase and dictionaries as v6, with a different structure and the finishing layer a launch needs.
 
@@ -57,3 +57,13 @@ Claude's professional take on the same club site. Same codebase and dictionaries
 - Home hero is one clean screen: label, title, one sentence, one main button. On phone and tablet the "next run" card moves just below the hero (it stays in the hero on wide screens).
 - Events and Contact heroes are sized as a share of the window height (`settings.hero.ratio`: wide .38, desktop .40, tablet .50, phone .52, limited to 300-640 px), so the image is bigger and the content starts lower on phone and tablet.
 - Page titles use the top of your size table (64 / 52 / 40 / 34 px) with a short accent bar underneath.
+
+
+## New in v10
+- **Come as you are** section right after the Home hero: warm words, four plain promises, a film or photos. Edit in `content.belonging` and the `people` photos.
+- **Events** now leads with a photo mosaic, a photo walk through a Saturday, pace group photos, event photos, a birthday photo and a Find us block with a free Maps link.
+- **Photos dictionary** (`js/data/photos.js`): every picture by tag. Missing tags fall back to the gallery.
+- **Tools** in `tools/`: `prepare_images.py` (resize, strip location data, contact sheets, writes the lines to paste) and `set_domain.py` (fixes the web address everywhere).
+- **WhatsApp** can be a number or a group invite link (`whatsapp.link`).
+- **Search:** fallback text in the HTML, location tags, `vercel.json` caching, and the steps in `HOW_TO_UPDATE.md`.
+- Read `HOW_TO_UPDATE.md` first. It has the folder map and exactly what to paste where.

@@ -11,3 +11,4 @@ WRJ.data.gallery = [
   { id: 'g8', src: 'assets/gallery/p6.jpeg', alt: 'Steel cable detail', caption: 'Steel and light',            ratio: 1.4 },
   { id: 'g9', src: 'assets/gallery/p7.jpeg', alt: 'Street lamps along the bridge', caption: 'Lamp line',       ratio: 1 }
 ];
+

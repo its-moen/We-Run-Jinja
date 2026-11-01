@@ -19,12 +19,12 @@ WRJ.data.groups = [
 ];
 
 WRJ.data.events = [
-  { id: 'ev-aerobics-walk',   title: 'Aerobics and seed walkers morning', kind: 'social', date: '2026-11-07', time: '06:30', place: 'Jinja Bridge viewpoint',   distance: '1 to 4 km', text: 'Warm up with aerobics, then a gentle 1 to 4 km walk or jog.' },
-  { id: 'ev-charity-fun-run', title: 'Charity fun run for school fees', kind: 'charity', date: '2026-11-14', time: '07:00', place: 'Jinja Main Street',        distance: '5 km',  text: 'Raise money for local students. Walk, jog or run.' },
-  { id: 'ev-away-half',       title: 'Away half marathon weekend',      kind: 'race',    date: '2026-11-22', time: '06:00', place: 'Kampala',                   distance: '21 km', text: 'Shared transport and a team photo at the finish.' },
-  { id: 'ev-sunrise-long',    title: 'Nile sunrise long run',           kind: 'club',    date: '2026-12-05', time: '05:45', place: 'Source of the Nile path',   distance: '15 km', text: 'An early start for the best light of the year.' },
-  { id: 'ev-year-end-10k',    title: 'Year end club 10K',               kind: 'race',    date: '2026-12-19', time: '06:30', place: 'Jinja Bridge viewpoint',    distance: '10 km', text: 'Our own timed 10K with medals for every finisher.' },
-  { id: 'ev-new-year-social', title: 'New year social run',             kind: 'social',  date: '2027-01-02', time: '07:00', place: 'Bujagali Falls',            distance: '6 km',  text: 'Easy kilometres and breakfast by the river.' }
+  { id: 'ev-aerobics',   title: 'Aerobics and speed walkers morning', kind: 'social', date: '2026-11-07', time: '06:30', place: 'Jinja Bridge viewpoint',   distance: '1 to 4 km', text: 'Warm up with aerobics, then a gentle 1 to 4 km walk or jog.' },
+  { id: 'ev-charity', title: 'Charity fun run for school fees', kind: 'charity', date: '2026-11-14', time: '07:00', place: 'Jinja Main Street',        distance: '5 km',  text: 'Raise money for local students. Walk, jog or run.' },
+  { id: 'ev-away',       title: 'Away half marathon weekend',      kind: 'race',    date: '2026-11-22', time: '06:00', place: 'Kampala',                   distance: '21 km', text: 'Shared transport and a team photo at the finish.' },
+  { id: 'ev-sunrise',    title: 'Nile sunrise long run',           kind: 'club',    date: '2026-12-05', time: '05:45', place: 'Source of the Nile path',   distance: '15 km', text: 'An early start for the best light of the year.' },
+  { id: 'ev-year',    title: 'Year end club 10K',               kind: 'race',    date: '2026-12-19', time: '06:30', place: 'Jinja Bridge viewpoint',    distance: '10 km', text: 'Our own timed 10K with medals for every finisher.' },
+  { id: 'ev-newyear', title: 'New year social run',             kind: 'social',  date: '2027-01-02', time: '07:00', place: 'Bujagali Falls',            distance: '6 km',  text: 'Easy kilometres and breakfast by the river.' }
 ];
 
 WRJ.data.birthdayRun = {

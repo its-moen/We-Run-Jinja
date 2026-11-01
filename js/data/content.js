@@ -17,7 +17,7 @@ WRJ.data.content = {
       { icon: 'route', title: 'Know the road',    text: 'We look after each other and respect shared roads.' }
     ],
     timeline: [
-      { year: '2019', text: 'First Saturday run on Jinja Bridge.' },
+      { year: '2026', text: 'First Saturday run on Jinja Bridge.' },
       { year: '2020', text: 'Midweek sessions and our first away marathon.' },
       { year: '2022', text: 'First charity fun run for school fees.' },
       { year: '2024', text: 'Monthly birthday celebration begins.' },
@@ -49,7 +49,7 @@ WRJ.data.content = {
     title: 'A Saturday, step by step',
     text: 'Here is how a normal Saturday goes, so nothing is a surprise.',
     steps: [
-      { n: 1, title: 'Meet at the  Sikia - Jinja', text: 'Arrive around 06:15. Someone in a club shirt will say hello.', tag: 'meet' },
+      { n: 1, title: 'Meet at the  Sikia - Jinja', text: 'Arrive around 06:50am. Someone in a club shirt will say hello.', tag: 'meet' },
       { n: 2, title: 'Warm up together',   text: 'Ten easy minutes of moving, with music some days.', tag: 'warmup' },
       { n: 3, title: 'Run or walk',        text: 'Pick your group and go at your pace. Nobody is left behind.', tag: 'run' },
       { n: 4, title: 'Coffee and stories', text: 'We stay, chat and cheer the last finishers in.', tag: 'coffee' }
@@ -58,9 +58,9 @@ WRJ.data.content = {
   findUs: {
     label: 'Find us',
     title: 'Where to stand on Saturday',
-    text: 'Look for the tall bridge pylon and people in orange shirts. If you cannot find us, message and we will come and get you.',
-    place: 'Jinja Bridge viewpoint, Njeru side',
-    mapsQuery: 'Jinja Bridge viewpoint Njeru Uganda'
+    text: 'Look for Sikia Cafe on Gabula road. If you cannot find us, message and we will come and get you.',
+    place: 'Sikia Cafe - Gabula Road, Town side',
+    mapsQuery: 'Jinja Sikia Cafe - Jinja Town - Uganda'
   },
   facts: [
     { icon: 'calendar', label: 'When',  value: 'Saturdays, 06:30' },
